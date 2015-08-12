@@ -1,0 +1,190 @@
+$(document).ready(function(){
+	
+		var profileHolder = $("#profile-holder"), bioHolder = $("#bio-holder"), ex = $("#ex"), linksWrapper = $("#links-wrapper"), works = $("#works"),
+		bioCSS = {
+			"width" : "100%",
+			"height" : "35%",
+			"opacity" : "1",
+			"bottom" : "0"
+		},
+		profileCSS = {
+			"width" : "100%",
+			"height" : "65%",
+			"opacity" : "1",
+			"top" : "0"
+		}
+		
+	function delay(fn, time) {
+		setTimeout(function() {
+			fn();
+		}, time);
+	}
+		
+	
+	var MaterialAnim = {
+
+		profileAppear: function() {
+			profileHolder.css({
+				"width": "100%",
+				"height": "65%"
+			}).animate({
+				top: 0,
+				opacity: 1
+			}, 400);
+
+		},
+
+		profileDisappear: function () {
+			profileHolder.animate({
+				top: "40px",
+				opacity: 0
+			}, {
+				duration: 400,
+				complete: function() {
+					profileHolder.css({
+						"width": "0",
+						"height": "0"
+					});
+				}
+			});
+		},
+
+		bioAppear: function () {
+			bioHolder.css({
+				"width": "100%",
+				"height": "35%"
+			}).animate({
+				bottom: 0,
+				opacity: 1
+			}, 400);
+		},
+
+		bioDisappear: function() {
+			bioHolder.animate({
+				bottom: "-65px",
+				opacity: 0
+			}, {
+				duration: 400,
+				complete: function() {
+					bioHolder.css({
+						"width": "0",
+						"height": "0"
+					});
+				}
+			});
+		},
+		
+		worksAppear: function() {
+			works.css({
+				"width": "100%",
+				"height": "100%"
+			}).animate({
+				top: 0,
+				opacity: 1
+			}, 400);
+		},
+		
+		worksDisappear: function() {
+			works.animate({
+				top: "40px",
+				opacity: 0
+			}, {
+				diration: 400,
+				complete: function() {
+					works.css({
+						"width": "0",
+						"height": "0"
+					})
+				}
+			});
+		}
+
+	};
+	
+	setTimeout(function() {
+		MaterialAnim.profileAppear();
+		MaterialAnim.bioAppear();
+	}, 800);
+	
+	$(".btn-ripple").on("mousedown", function(e) {
+		var offsets = $(this).offset(),
+			cursorLeft = e.pageX - offsets.left,
+			cursorTop = e.pageY - offsets.top;
+		$(this).append("<div class='ripple'></div>");
+		var ripple = $(this).children(".ripple");
+		ripple.css({
+			"top": cursorTop+"px",
+			"left": cursorLeft+"px"
+		});
+		setTimeout(function() {
+			ripple.remove();
+		}, 350)
+	});
+	
+	setTimeout(function() {
+		ex.css({
+			"transform":"scale(1)"
+		}).removeClass("fabAppear");
+	}, 2200);
+	
+	setTimeout(function() {
+		$("#ripple-circle").remove();
+	}, 1000);
+	
+	ex.on("click", function() {
+			setTimeout(function() {
+				profileHolder.css("overflow", "hidden");
+			}, 250);
+			$(this).addClass("fabToLinks");
+			setTimeout(function() {
+				ex.css({
+					"background" : "rgba(20, 20, 20, .9)",
+					"background-repeat" : "no-repeat",
+					"transform" : "scale(25)",
+					"-webkit-transform" : "scale(25)"
+				}).removeClass("fabToLinks");
+				linksWrapper.fadeIn("fast");
+				bioHolder.css("z-index", "15");
+			}, 800);
+
+			setTimeout(function() {
+				linksWrapper.append('<div id="close-links" class="showClose"></div>');
+			}, 1000);
+
+	});
+	
+	linksWrapper.on("click", "#close-links", function () {
+		$(this).fadeOut("fast").remove();
+		setTimeout(function () {
+			linksWrapper.fadeOut("fast");
+		}, 200);
+		setTimeout(function () {
+			profileHolder.removeAttr("style").css("overflow", "none").css(profileCSS);
+		}, 600);
+		
+		setTimeout(function() {
+			bioHolder.removeAttr("style").css(bioCSS);
+		}, 750);
+		
+		setTimeout(function () {
+			ex.addClass("linksToFab").on("animationend", function() {
+				$(this).removeAttr("style").css("transform", "scale(1)").removeClass("linksToFab");
+			});
+		}, 120);
+	});
+	
+	$("#go-to-works").click(function() {
+		MaterialAnim.profileDisappear();
+		MaterialAnim.bioDisappear();
+		//setTimeout(function() {
+		MaterialAnim.worksAppear();
+		//}, 350);
+	});
+	
+	$("#back-arrow").click(function() {
+		MaterialAnim.worksDisappear();
+		delay(MaterialAnim.profileAppear(), 200);
+		delay(MaterialAnim.bioAppear(), 300);
+	});
+	
+});
