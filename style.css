@@ -588,15 +588,9 @@ body {
 	
 		100% {
 			width:320px;
-			height:70%;
+			height:75%;
 			border-radius:4px;
 		}
-	}
-	
-	.paper {
-		width:320px;
-		height:70%;
-		border-radius:4px;	
 	}
 }
 
