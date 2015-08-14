@@ -702,6 +702,21 @@ body {
 	}
 }
 
+@media screen and (min-height:677px) {
+		@keyframes fabToCard {
+	
+		50% {
+			border-radius:4px;
+		}
+	
+		100% {
+			width:370px;
+			height:460px;
+			border-radius:4px;
+		}
+	}
+}
+
 @media screen and (max-height:635px) {
 	#name {
 		margin-top:8px;
