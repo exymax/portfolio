@@ -70,82 +70,6 @@
 	}
 }
 
-/*@keyframes profileAppear {
-	0% {
-		width:100%;
-		height:65%;
-	}
-	
-	100% {
-		width:100%;
-		height:65%;
-		top:0;
-		opacity:1;
-	}
-}
-
-@keyframes profileDisappear {
-	0% {
-		width:100%;
-		height:65%;
-	}
-	
-	100% {
-		top:40px;
-		opacity:0;
-	}
-}
-
-
-@keyframes bioAppear {
-	0% {
-		width:100%;
-		height:35%;
-	}
-	
-	100% {
-		width:100%;
-		height:35%;
-		bottom:0;
-		opacity:1;
-	}
-}
-
-@keyframes bioDisappear {
-	0% {
-		width:100%;
-		height:35%;
-		bottom:0;
-	}
-	
-	
-	100% {
-		bottom:-65px;
-		opacity:0;
-	}
-}
-
-@keyframes worksAppear {
-	0% {
-		width:100%;
-		height:100%;
-	}
-	
-	100% {
-		width:100%;
-		height:100%;
-		top:0;
-		opacity:1;
-	}
-}
-
-@keyframes worksDisappear {	
-	100% {
-		top:40px;
-		opacity:0;
-	}
-}*/
-
 @keyframes fabToLinks {
 	35% {
 		bottom:50%;
@@ -233,8 +157,6 @@ body {
 	z-index:2;
 	bottom:95%;
 	left:50%;
-	/*transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);*/
 	transform: translateX(-50%);
 	background:#fff;
 	border-radius:100%;
@@ -251,10 +173,6 @@ body {
 
 .card-animations {
 	animation: moveDown .4s ease-in forwards, moveUp .3s .4s ease-out forwards , fabToCard .5s .4s cubic-bezier(0.86, 0, 0.07, 1) forwards;
-}
-
-.noOverflow {
-	overflow:hidden;
 }
 
 #main-card {
@@ -351,16 +269,6 @@ body {
 	background-size:100%;
 	opacity:0;
 }
-
-/*.profileAppear {	
-	animation: profileAppear .4s .8s ease-out forwards;
-}
-
-.profileDisappear {
-	animation: profileDisappear .3s ease-out forwards;
-	animation-direction: alternate-reverse;
-	-webkit-animation-direction: alternative-reverse;
-}*/
 
 /*Links*/
 
@@ -476,16 +384,6 @@ body {
 	left:0;
 	opacity:0;
 }
-
-/*.bioAppear {
-	animation: bioAppear .4s 1s ease-out forwards;
-}
-
-.bioDisappear {
-	animation: bioDisappear .3s .2s ease-out forwards;
-	animation-direction: alternate-reverse;
-	-webkit-animation-direction: alternative-reverse;
-}*/
 
 .desc {
 	width:100%;
@@ -703,7 +601,7 @@ body {
 }
 
 @media screen and (min-height:677px) {
-		@keyframes fabToCard {
+	@keyframes fabToCard {
 	
 		50% {
 			border-radius:4px;
