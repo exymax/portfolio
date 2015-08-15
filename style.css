@@ -565,11 +565,9 @@ body {
 
 @media screen and (max-width:660px) {
 	@keyframes fabToCard {
-	
 		50% {
 			border-radius:4px;
 		}
-	
 		100% {
 			width:320px;
 			height:75%;
@@ -580,11 +578,9 @@ body {
 
 @media screen and (min-height:677px) {
 	@keyframes fabToCard {
-	
 		50% {
 			border-radius:4px;
 		}
-	
 		100% {
 			width:370px;
 			height:460px;
