@@ -173,8 +173,8 @@ $(document).ready(function(){
 	
 	$("#back-arrow").click(function() {
 		MaterialAnim.worksDisappear();
-		delay(MaterialAnim.profileAppear(), 200);
-		delay(MaterialAnim.bioAppear(), 300);
+		MaterialAnim.profileAppear();
+		MaterialAnim.bioAppear();
 	});
 	
 });
