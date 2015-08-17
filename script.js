@@ -91,10 +91,10 @@ $(document).ready(function(){
 
 	};
 	
-	setTimeout(function() {
+	/*setTimeout(function() {
 		MaterialAnim.profileAppear();
 		MaterialAnim.bioAppear();
-	}, 800);
+	}, 800);*/
 	
 	if(card.hasClass("animating"))
 		card.on("animationend", function() {
