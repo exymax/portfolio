@@ -25,9 +25,7 @@ $(document).ready(function(){
 
 		profileAppear: function() {
 			profileHolder.css({
-				"display": "block",
-				"width": "100%",
-				"height": "65%"
+				"display": "block"
 			}).animate({
 				top: 0,
 				opacity: 1
@@ -43,9 +41,7 @@ $(document).ready(function(){
 				duration: 400,
 				complete: function() {
 					profileHolder.css({
-						"display": "none",
-						"width": "0",
-						"height": "0"
+						"display": "none"
 					});
 				}
 			});
@@ -53,9 +49,7 @@ $(document).ready(function(){
 
 		bioAppear: function () {
 			bioHolder.css({
-				"display": "block",
-				"width": "100%",
-				"height": "35%"
+				"display": "block"
 			}).animate({
 				bottom: 0,
 				opacity: 1
@@ -70,9 +64,7 @@ $(document).ready(function(){
 				duration: 400,
 				complete: function() {
 					bioHolder.css({
-						"display": "none", 
-						"width": "0",
-						"height": "0"
+						"display": "none"
 					});
 				}
 			});
@@ -80,9 +72,7 @@ $(document).ready(function(){
 		
 		worksAppear: function() {
 			works.css({
-				"display": "block",
-				"width": "100%",
-				"height": "100%"
+				"display": "block"
 			}).animate({
 				top: 0,
 				opacity: 1
@@ -97,9 +87,7 @@ $(document).ready(function(){
 				diration: 400,
 				complete: function() {
 					works.css({
-						"display": "none",
-						"width": "0",
-						"height": "0"
+						"display": "none"
 					})
 				}
 			});
