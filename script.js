@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	
-		var profileHolder = $("#profile-holder"), bioHolder = $("#bio-holder"), ex = $("#ex"), linksWrapper = $("#links-wrapper"), works = $("#works"),
+		var card = $("#main-card"), profileHolder = $("#profile-holder"), bioHolder = $("#bio-holder"), ex = $("#ex"), linksWrapper = $("#links-wrapper"), works = $("#works"),
 		bioCSS = {
 			"display": "block",
 			"width" : "100%",
@@ -15,11 +15,6 @@ $(document).ready(function(){
 			"opacity" : "1",
 			"top" : "0"
 		}
-		
-	if(ex.hasClass("fabAppear"))
-		ex.on("animationend", function() {
-			$(this).removeClass("fabAppear").css("transform", "scale(1)");
-		});
 		
 	
 	var MaterialAnim = {
@@ -100,6 +95,17 @@ $(document).ready(function(){
 		MaterialAnim.profileAppear();
 		MaterialAnim.bioAppear();
 	}, 800);
+	
+	if(card.hasClass("animating"))
+		card.on("animationend", function() {
+			MaterialAnim.profileAppear();
+			MaterialAnim.bioAppear();
+		}).removeClass("animating");
+	
+	if(ex.hasClass("fabAppear"))
+		ex.on("animationend", function() {
+			$(this).removeClass("fabAppear").css("transform", "scale(1)");
+		});
 	
 	$(".btn-ripple").on("mousedown", function(e) {
 		var offsets = $(this).offset(),
