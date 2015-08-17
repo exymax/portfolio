@@ -20,7 +20,7 @@ $(document).ready(function(){
 		ex.removeClass("fabAppear").css({
 			"transform":"scale(1)"
 		});
-	}, 2400);
+	}, 2600);
 		
 	
 	var MaterialAnim = {
