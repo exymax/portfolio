@@ -117,11 +117,11 @@ $(document).ready(function(){
 		}, 350)
 	});
 	
-	setTimeout(function() {
+	/*setTimeout(function() {
 		ex.css({
 			"transform":"scale(1)"
 		}).removeClass("fabAppear");
-	}, 2200);
+	}, 2200);*/
 	
 	setTimeout(function() {
 		$("#ripple-circle").remove();
