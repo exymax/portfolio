@@ -174,8 +174,11 @@ $(document).ready(function(){
 	
 	$("#back-arrow").click(function() {
 		MaterialAnim.worksDisappear();
+		setTimeout(function() {
 		MaterialAnim.profileAppear();
-		MaterialAnim.bioAppear();
+		MaterialAnim.bioAppear();			
+		}, 400);
+
 	});
 	
 });
