@@ -153,11 +153,11 @@ $(document).ready(function(){
 			linksWrapper.fadeOut("fast");
 		}, 200);
 		setTimeout(function () {
-			profileHolder.removeAttr("style").css("overflow", "none").css(profileCSS);
+			profileHolder.css("overflow", "none");
 		}, 600);
 		
 		setTimeout(function() {
-			bioHolder.removeAttr("style").css(bioCSS);
+			bioHolder.css(bioCSS);
 		}, 750);
 		
 		setTimeout(function () {
