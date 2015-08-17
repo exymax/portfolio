@@ -96,13 +96,6 @@ $(document).ready(function(){
 			MaterialAnim.bioAppear();		
 	}, 800);
 	
-	/*if(card.hasClass("animating"))
-		card.on("animationend", function() {
-			$(this).removeClass("animating");
-			MaterialAnim.profileAppear();
-			MaterialAnim.bioAppear();
-		});*/
-	
 	if(ex.hasClass("fabAppear"))
 		ex.on("animationend", function() {
 			$(this).removeClass("fabAppear").css("transform", "scale(1)");
@@ -179,11 +172,8 @@ $(document).ready(function(){
 	
 	$("#back-arrow").click(function() {
 		MaterialAnim.worksDisappear();
-		setTimeout(function() {
 		MaterialAnim.profileAppear();
 		MaterialAnim.bioAppear();			
-		}, 400);
-
 	});
 	
 });
