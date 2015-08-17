@@ -153,7 +153,7 @@ $(document).ready(function(){
 			linksWrapper.fadeOut("fast");
 		}, 200);
 		setTimeout(function () {
-			profileHolder.css(profileCSS);
+			profileHolder.css(profileCSS).css("overflow", "none");
 		}, 600);
 		
 		setTimeout(function() {
