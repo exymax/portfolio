@@ -91,16 +91,12 @@ $(document).ready(function(){
 
 	};
 	
-	/*setTimeout(function() {
-		MaterialAnim.profileAppear();
-		MaterialAnim.bioAppear();
-	}, 800);*/
-	
 	if(card.hasClass("animating"))
 		card.on("animationend", function() {
+			$(this).removeClass("animating");
 			MaterialAnim.profileAppear();
 			MaterialAnim.bioAppear();
-		}).removeClass("animating");
+		});
 	
 	if(ex.hasClass("fabAppear"))
 		ex.on("animationend", function() {
