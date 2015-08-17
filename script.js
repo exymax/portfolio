@@ -16,11 +16,10 @@ $(document).ready(function(){
 			"top" : "0"
 		}
 		
-	setTimeout(function() {
-		ex.removeClass("fabAppear").css({
-			"transform":"scale(1)"
+	if(ex.hasClass("fabAppear"))
+		ex.on("animationend", function() {
+			$(this).removeClass("fabAppear").css("transform", "scale(1)");
 		});
-	}, 2600);
 		
 	
 	var MaterialAnim = {
