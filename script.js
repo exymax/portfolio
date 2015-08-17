@@ -91,12 +91,17 @@ $(document).ready(function(){
 
 	};
 	
-	if(card.hasClass("animating"))
+	setTimeout(function() {
+			MaterialAnim.profileAppear();
+			MaterialAnim.bioAppear();		
+	}, 800);
+	
+	/*if(card.hasClass("animating"))
 		card.on("animationend", function() {
 			$(this).removeClass("animating");
 			MaterialAnim.profileAppear();
 			MaterialAnim.bioAppear();
-		});
+		});*/
 	
 	if(ex.hasClass("fabAppear"))
 		ex.on("animationend", function() {
