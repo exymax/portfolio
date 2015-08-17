@@ -25,6 +25,7 @@ $(document).ready(function(){
 
 		profileAppear: function() {
 			profileHolder.css({
+				"display": "block",
 				"width": "100%",
 				"height": "65%"
 			}).animate({
@@ -42,6 +43,7 @@ $(document).ready(function(){
 				duration: 400,
 				complete: function() {
 					profileHolder.css({
+						"display": "none",
 						"width": "0",
 						"height": "0"
 					});
@@ -51,6 +53,7 @@ $(document).ready(function(){
 
 		bioAppear: function () {
 			bioHolder.css({
+				"display": "block",
 				"width": "100%",
 				"height": "35%"
 			}).animate({
@@ -67,6 +70,7 @@ $(document).ready(function(){
 				duration: 400,
 				complete: function() {
 					bioHolder.css({
+						"display": "none", 
 						"width": "0",
 						"height": "0"
 					});
@@ -76,6 +80,7 @@ $(document).ready(function(){
 		
 		worksAppear: function() {
 			works.css({
+				"display": "block",
 				"width": "100%",
 				"height": "100%"
 			}).animate({
@@ -92,6 +97,7 @@ $(document).ready(function(){
 				diration: 400,
 				complete: function() {
 					works.css({
+						"display": "none",
 						"width": "0",
 						"height": "0"
 					})
