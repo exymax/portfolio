@@ -16,11 +16,11 @@ $(document).ready(function(){
 			"top" : "0"
 		}
 		
-	function delay(fn, time) {
-		setTimeout(function() {
-			fn();
-		}, time);
-	}
+	setTimeout(function() {
+		ex.removeClass("fabAppear").css({
+			"transform":"scale(1)"
+		});
+	}, 2400);
 		
 	
 	var MaterialAnim = {
@@ -116,12 +116,6 @@ $(document).ready(function(){
 			ripple.remove();
 		}, 350)
 	});
-	
-	setTimeout(function() {
-		ex.removeClass("fabAppear").css({
-			"transform":"scale(1)"
-		});
-	}, 2200);
 	
 	setTimeout(function() {
 		$("#ripple-circle").remove();
