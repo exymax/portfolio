@@ -2,12 +2,14 @@ $(document).ready(function(){
 	
 		var profileHolder = $("#profile-holder"), bioHolder = $("#bio-holder"), ex = $("#ex"), linksWrapper = $("#links-wrapper"), works = $("#works"),
 		bioCSS = {
+			"display": "block",
 			"width" : "100%",
 			"height" : "35%",
 			"opacity" : "1",
 			"bottom" : "0"
 		},
 		profileCSS = {
+			"display": "block",
 			"width" : "100%",
 			"height" : "65%",
 			"opacity" : "1",
