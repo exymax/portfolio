@@ -534,13 +534,13 @@ body {
 
 #beltechcenter .image {
 	background:url(images/beltechcenter.png) no-repeat;
-	background-size:50%;
+	background-size:70%;
 	background-position: 50% 50%;
 }
 
 #paperGeometry .image {
 	background:url(images/papergeometry.png) no-repeat;
-	background-size:50%;
+	background-size:70%;
 	background-position: 60% 55%;
 }
 
