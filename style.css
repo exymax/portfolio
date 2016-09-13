@@ -532,6 +532,16 @@ body {
 	background-position: 47% 50%;
 }
 
+#beltechcenter .image {
+	background:url(images/beltechcenter.png) no-repeat;
+	background-position: 50% 50%;
+}
+
+#paperGeometry .image {
+	background:url(images/papergeometry.png) no-repeat;
+	background-position: 60% 55%;
+}
+
 #coming-soon {
 	position:relative;
 	font-size: 20px;
